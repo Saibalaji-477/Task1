@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="C:/Users/leemo/Desktop/BOOTSTRAP/css/bootstrap.css">
+        <script src="C:/Users/leemo/Desktop/BOOTSTRAP/js/bootstrap.bundle.js"></script>
+        
+        <script>
+            function showMessage() {
+                var json_obj=document.getElementById("text").value;
+                var obj=JSON.parse(json_obj);
+                alert(obj.car[1]);
+            }
+       </script>
+    </head>
+    <body>
+       <textarea id="text"  class="w-75 bg-primary text-white ">
+
+       </textarea><br/>
+       <input type="submit" onclick="showMessage()"/>
+        
+    </body>
+</html>

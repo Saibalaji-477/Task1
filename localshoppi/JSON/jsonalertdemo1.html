@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Fetch a JSON file with XMLHttpRequest</h2>
+<p>Content written as an JSON array will be converted into a JavaScript array.</p>
+<p id="demo"></p>
+
+<script>
+var json_obj='{"car":"BMW","name":"John","age":31,"city":"New York"}';
+
+// Retrieving data:
+var obj=JSON.parse(json_obj);
+alert(JSON.stringify(obj));
+alert(obj.car);
+</script>
+
+</body>
+</html>

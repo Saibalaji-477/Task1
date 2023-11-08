@@ -1,0 +1,125 @@
+
+<html>
+    <head>
+        <title>jQuery demo</title>
+       
+        
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/bootstrap.bundle.js" async></script>
+        
+        <script src="C:\Users\leemo\Desktop\BOOTSTRAP\js\jquery-3.6.4.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            #movingbox{
+                height:100px;
+                width:100px;
+            }
+            .dis{
+                display: none;;
+            }
+            
+        </style>
+            <script>
+                $(document).ready(function(){
+                    $('#btn1').click(function(){
+                        $('#test1').text('leemoji');
+                    });
+                    $('#btn2').click(function(){
+                        $('#test2').html('<b>leemoji</b>');
+                    });
+                    $('#btn3').click(function(){          
+                        $('#test3').val("leemo");
+                    });
+                    $('#show').click(function(){
+                        $('p').show('fast');
+                    });
+                    $('#hide').click(function(){
+                        $('p').hide('slow');
+                    });
+                    $('#animate').click(function(){
+                        $('#movingbox').animate({
+                            left:'+=250px',
+                            width: '+=350px',
+                            height:'+=350px'
+                        },"slow");
+                        $('#movingbox').animate({
+                            left:'-=250px',
+                            width: '-=350px',
+                            height:'-=350px'
+                        },"slow");
+                    });
+                    $('#display').click(function(){
+                        $('#body1').removeClass('dis');
+                       $('#body1').slideToggle('slow',function(){
+                            $('#movingbox').removeClass('dis').fadeToggle('slow');
+                        });
+                    });
+                    
+                });
+
+                
+            </script>
+    </head>
+    <body>
+        
+        <p id="test1">This is a paragraph.</p>
+        <p id="test2">This is another paragraph.</p>
+        
+        <p>Input field: <input type="text" id="test3" value="Mickey Mouse"/></p>
+        
+        <button id="btn1">Set Text</button>
+        <button id="btn2">Set HTML</button>
+        <button id="btn3">Set Value</button>
+        <button class="btn btn-outline-info" id="show">Show Text</button>
+        <button class="btn btn-outline-warning" id="hide">Hide Text</button>
+        <button class="btn btn-outline-danger" id="animate">Animate</button>
+        
+        <div class=" bg-primary  position-relative dis" id="movingbox"></div>
+        <!--fading body-->
+        <button class="btn btn-outline-success" id="display">display body</button>
+
+         <!--body-->
+         <div class="row mt-5 align-item-center dis " id="body1">
+            <div class="col-lg-6">
+                <img class="img-fluid ms-5 h-75" src="C:\Users\leemo\Desktop\BOOTSTRAP\localshoppie-IMG\img-1.jpg" alt="image not found"/>
+
+            </div>
+            <div class="col-lg-6">
+               <div class="card p-3 me-5 shadow">
+                    <div class="card-body">
+                        <h3 class="card-title ">Registration Form</h3>
+                        <form>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                              <input type="text" class="form-control" placeholder="Full Name">
+                            </div>
+                          
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                                <input type="email" class="form-control" placeholder="Email Adress">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">+91</span>
+                                <input type="number" class="form-control" placeholder="phone number">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                <input type="password" class="form-control" placeholder="password">
+                            </div>
+                            <div >
+                                <input type="button"class="btn btn-warning mb-3 border-5 rounded-5 w-100 text-white" value="Register"/>
+                            </div>
+                            <div>
+                                <p class="text-secondary fw-bolder mb-3 fs-5">Have already account?
+                                    <button class="text-warning border-0 bg-light" href="#">Login HERE</button>
+                                </p>
+                            </div>
+                          </form>
+                    </div>
+               </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+body{
+    background-image:url("C:/Users/leemo/Desktop/backgroundimg.jpg");
+    
+}
+p{
+    color:white;
+    border-radius:10px;
+    border:2px dotted blue;
+    
+}
+span{
+    position: fixed;
+    right:0;
+    top:50%;
+    font-size: 30px;
+    font-weight:100px;
+    color:white;
+}
+ul>li{
+    display:inline-block;
+    margin-left: 2em;
+    opacity:0.8;
+    color:white;      
+}
+
+.dropdown-1{
+    display: inline-block;
+    position:relative;
+}
+div>a{
+    display:block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-1:hover .dropdown-content{
+    display:block;
+    text-align:left;
+    color:black;
+}
+.image-dropdown{
+    position:relative;
+}
+.image-dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 160px;
+    height:160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.image-dropdown:hover .image-dropdown-content{
+    display:block;
+}
+.toggle-password {
+    position: relative;
+    top: -25px;
+    right: 10px;
+    float: right;
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  .toggle-password .fa {
+    margin-right: 5px;
+  }
+  
+  .toggle-password .fa-eye-slash {
+    display: none;
+  }
+  
+  .toggle-password.hide-password .fa-eye {
+    display: none;
+  }
+  
+  .toggle-password.hide-password .fa-eye-slash {
+    display: inline;
+  }
+  
